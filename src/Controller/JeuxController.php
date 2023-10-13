@@ -28,10 +28,16 @@ class JeuxController extends AbstractController
             "jeux" => $jeux
         ]);
     }
-    #[Route('/joueurs', name: 'joueurs')]
+
+    #[Route('/joueurs', name: 'joueurs')]   
     public function ajoutJoueur(Request $requete, ManagerRegistry $manager)
     {
-        $joueurs = new Joueurs();
+       
+        // $entity = $entityManager->find($id);
+        // if (!$id) {
+         $joueurs = new Joueurs();
+
+        // }
 
         $formulaire = $this->createForm(JoueurType::class, $joueurs);
         $formulaire->handleRequest($requete);

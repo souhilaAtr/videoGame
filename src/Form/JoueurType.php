@@ -36,7 +36,7 @@ class JoueurType extends AbstractType
                     new Image()
                 ]
             ])
-         ->add('envoyer', SubmitType::class);
+            ->add('envoyer', SubmitType::class);
         // ->add('nomJoueur')
         // ->add('pseudonyme')
         // ->add('birthdate')
