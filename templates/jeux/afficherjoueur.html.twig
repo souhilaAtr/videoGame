@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+
+
+{% block body %}
+
+{% for row in joueurs %}
+<div class="card">
+    <img src="dossierJeu/{{row.avatar}}" alt="mario" style="width:100%">
+    <h1>{{row.nomJoueur}}</h1>
+    <h1>{{row.pseudonyme}}</h1>
+    <p class="price">{{row.birthdate|date("m/d/Y")}}</p>
+
+    <p><button>afficher plus</button></p>
+</div>
+
+{% endfor %}
+
+{% endblock %}

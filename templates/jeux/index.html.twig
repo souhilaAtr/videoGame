@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}jeux disponible{% endblock %}
+
+{% block body %}
+{% for row in jeux %}
+<div class="card">
+    <img src="dossierjeu/{{row.imgCouverture}}" alt="mario" style="width:100%">
+    <h1>{{row.nomJeu}}</h1>
+    <p class="price">{{row.noteMoyenne}}</p>
+    <p>{{row.description}}</p>
+    <p><button>afficher le jeu </button></p>
+</div>
+
+{% endfor %}
+{% endblock %}
